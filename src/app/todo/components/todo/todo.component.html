@@ -1,0 +1,19 @@
+<ng-container *ngIf="todo; else notFound">
+
+  <h2>
+    <div class="heading__prefix">
+      #️⃣{{todo.id}}
+    </div>
+    {{todo.title}}
+  </h2>
+  <button
+    type="button"
+    (click)="onDone()"
+  >
+    ✅ Done
+  </button>
+</ng-container>
+
+<ng-template #notFound>
+  Todo was not found
+</ng-template>

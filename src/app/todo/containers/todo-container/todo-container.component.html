@@ -1,0 +1,4 @@
+<a [routerLink]="['/todos']">
+  ⬅️ Back
+</a>
+<app-todo [todo]="todo$ | async" (done)="onDone($event)"></app-todo>
